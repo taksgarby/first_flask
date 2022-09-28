@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>My Order List!!</h1>
+        {% for order in orders %}
+        <div>
+            <p>
+                <a href="/orders/{{index}}"> {{ order.customer_name }}: <b>{{ order.quantity }} {{ order.donut_name }} with {{ order.donut_topping}}</b></a>
+
+            </p>
+        </div>
+    {% endfor%}
+    </body>
+</html>
