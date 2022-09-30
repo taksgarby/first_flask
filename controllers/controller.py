@@ -12,4 +12,6 @@ def orders_index():
 
 @app.route('/orders/<index>')
 def show_order(index):
-    return render_template('order.html', title = 'Order Details', order = orders[index])
+    chosen_order = orders[int(index)]
+    return render_template('order.html', order=chosen_order)
+

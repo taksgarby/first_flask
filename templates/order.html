@@ -5,10 +5,12 @@
     <body>
         <h1>Order details</h1>
   
-      <p>
-        hello
-      </p>
-
-
+        {% for order in orders %}
+        <div>
+            <p>
+               {{order.name}}
+            </p>
+        </div>
+    {% endfor%}
     </body>
 </html>
